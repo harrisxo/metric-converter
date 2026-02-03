@@ -1,0 +1,149 @@
+/* styles.css */
+:root{
+  --bg: #1b1b1f;
+  --surface: #111217;
+  --card: #1f2330;
+  --panel: #0f1320;
+  --hero: #6c4cff;
+  --heroText: #ffffff;
+  --text: #e8e8ef;
+  --muted: #b7b7c6;
+
+  --resultBg: #242b3a;
+  --resultTitle: #eaeaf2;
+
+  --btnBg: #ffffff;
+  --btnText: #2a2a35;
+
+  --border: rgba(255,255,255,.10);
+  --shadow: 0 18px 45px rgba(0,0,0,.35);
+
+  --radius: 18px;
+  --radiusSm: 12px;
+  --gap: 18px;
+}
+
+/* Light theme (optional) */
+body.theme-light{
+  --bg: #1d1d1d;
+  --surface: #f2f2f5;
+  --card: #ffffff;
+  --panel: #f2f2f5;
+  --text: #1d1d22;
+  --muted: #5a5a66;
+
+  --resultBg: #ffffff;
+  --resultTitle: #3a2d7a;
+
+  --border: rgba(0,0,0,.08);
+  --shadow: 0 18px 45px rgba(0,0,0,.18);
+}
+
+/* Dark theme */
+body.theme-dark{
+  background: radial-gradient(900px 400px at 50% -20%, rgba(108,76,255,.25), transparent 60%),
+              var(--bg);
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+}
+
+.app{
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 28px 16px;
+}
+
+.card{
+  width: 100%;
+  max-width: 520px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* HERO */
+.hero{
+  background: var(--hero);
+  color: var(--heroText);
+  padding: 28px 22px 24px;
+  text-align: center;
+}
+
+.hero__title{
+  margin: 0 0 18px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.hero__input-wrap{
+  width: 110px;
+  margin: 0 auto 12px;
+  border: 2px solid rgba(255,255,255,.45);
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+.hero__input{
+  width: 100%;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 800;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--heroText);
+  appearance: textfield;
+}
+.hero__input::-webkit-outer-spin-button,
+.hero__input::-webkit-inner-spin-button{ appearance: none; margin: 0; }
+
+.hero__btn{
+  display: inline-block;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  background: var(--btnBg);
+  color: var(--btnText);
+  cursor: pointer;
+}
+
+/* RESULTS */
+.panel{
+  background: var(--panel);
+  padding: 18px;
+  display: grid;
+  gap: var(--gap);
+}
+
+.result{
+  background: var(--resultBg);
+  border: 1px solid var(--border);
+  border-radius: var(--radiusSm);
+  padding: 16px 16px 14px;
+  text-align: center;
+}
+
+.result__title{
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--resultTitle);
+}
+
+.result__text{
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
