@@ -13,4 +13,4 @@ Ein kleiner Metric/Imperial-Umrechner für Länge, Volumen und Gewicht.
 
 ## Live-Demo
 Wenn GitHub Pages aktiv ist, ist die Seite hier erreichbar:
-[https://harrisxo.github.io/metric-converter/](https://harrisxo.github.io/metric-converter/)
+<a href="https://harrisxo.github.io/metric-converter/" target="_blank" rel="noopener noreferrer">https://harrisxo.github.io/metric-converter/</a>
